@@ -27,7 +27,7 @@ class GroupUser extends React.Component {
     if (process.env.NODE_ENV === 'development') {
       backendURL = `http://localhost:9000`
     } else {
-      backendURL = `https://shoppinglistredeploy.herokuapp.com/`
+      backendURL = `https://shoppinglistredeploy.herokuapp.com`
     }
 
     let token = localStorage.getItem('jwt')
