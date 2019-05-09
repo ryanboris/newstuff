@@ -14,11 +14,10 @@ if (process.env.NODE_ENV === 'development') {
 class Auth {
   constructor() {
     this.auth0 = new auth0.WebAuth({
-      domain: creds.DOMAIN,
-      audience: 'https://shoplegacy.auth0.com/api/v2/',
-      clientID: creds.ID,
-      redirectUri: `${callbackURL}`,
-      responseType: 'id_token',
+      domain: 'dev-of9gjpqq.auth0.com',
+      clientID: 'qdbQsPGU0eWskNkNp1P4R6VUSM1smsI6',
+      redirectUri: `https://shopappnewdeploy.netlify.com/callback`,
+      responseType: 'token id_token',
       scope: 'openid email profile'
     })
 
