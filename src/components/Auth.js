@@ -8,7 +8,7 @@ if (process.env.NODE_ENV === 'development') {
   process.NODE_ENV === 'production' ||
   process.NODE_ENV !== 'development'
 ) {
-  callbackURL = `https://shopappnewdeploy.netlify.com`
+  callbackURL = `https://shopappnewdeploy.netlify.com/callback`
 }
 
 class Auth {
