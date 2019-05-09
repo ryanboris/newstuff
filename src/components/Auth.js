@@ -1,5 +1,5 @@
 import auth0 from 'auth0-js'
-
+import { creds } from '../creds'
 let callbackURL
 
 if (process.env.NODE_ENV === 'development') {
@@ -14,9 +14,9 @@ if (process.env.NODE_ENV === 'development') {
 class Auth {
   constructor() {
     this.auth0 = new auth0.WebAuth({
-      domain: process.env.REACT_APP_AUTH0_DOMAIN,
+      domain: creds.DOMAIN,
       audience: 'https://shoplegacy.auth0.com/api/v2/',
-      clientID: process.env.REACT_APP_AUTH0_CLIENT_ID,
+      clientID: creds.ID,
       redirectUri: `${callbackURL}`,
       responseType: 'id_token',
       scope: 'openid email profile'

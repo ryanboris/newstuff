@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom'
 // import {Link, withRouter} from 'react-router-dom';
 import auth0Client from './Auth'
 import Auth0Lock from 'auth0-lock'
-
+import { creds } from '../creds'
 import { connect } from 'react-redux'
 import { checkEmail } from '../store/actions/rootActions'
 import './Styles/Navigation.css'
@@ -44,11 +44,7 @@ var lockOptions = {
   }
 }
 
-var lock = new Auth0Lock(
-  process.env.REACT_APP_AUTH0_CLIENT_ID,
-  process.env.REACT_APP_AUTH0_DOMAIN,
-  lockOptions
-)
+var lock = new Auth0Lock(creds.ID, creds.DOMAIN, lockOptions)
 
 class Navigation extends React.Component {
   constructor(props) {
