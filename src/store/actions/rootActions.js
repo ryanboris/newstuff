@@ -100,7 +100,7 @@ export const checkEmail = () => {
     }
   }
 
-  const fetchUserId = axios.get(`${backendURL}/api/user/check/getid`, options)
+  const fetchUserId = axios.get(`${backendURL}/api/user/check/getId`, options)
 
   return dispatch => {
     dispatch({ type: CHECKING_EMAIL })
